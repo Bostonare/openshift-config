@@ -5,7 +5,7 @@ metadata:
 data:
   DB_HOST: "postgres"
   DB_PORT: "5432"
-  DB_USER: "databasuser"
+  DB_USER: "databaseuser"
   DB_NAME: "guestbook"
   REDIS_HOST: "redis"
   REDIS_PORT: "6379"

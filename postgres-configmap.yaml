@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: postgres-config
 data:
-  POSTGRESQL_USER: databasuser
+  POSTGRESQL_USER: databaseuser
   POSTGRESQL_DATABASE: guestbook
