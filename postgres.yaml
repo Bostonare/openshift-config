@@ -14,29 +14,29 @@ spec:
         app: postgres
     spec:
       containers:
-       - name: postgres
-         image: quay.io/fedora/postgresql-16:63cb3441de6f5b5bc6ce431bb5c7418ba2bdff33
-         ports:
-           - containerPort: 5432
-         volumeMounts:
-          - name: postgres
-            mountPath: /var/lib/pgsql/data
-         env:
-          - name: POSTGRESQL_USER
-            valueFrom:
-               configMapKeyRef:
-                 name: postgres-config
-                 key: POSTGRESQL_USER
-          - name: POSTGRESQL_PASSWORD
-            valueFrom:
-               secretKeyRef:
-                 name: postgres-password
-                 key: POSTGRESQL_PASSWORD
-          - name: POSTGRESQL_DATABASE
-            valueFrom:
-               configMapKeyRef:
-                 name: postgres-config
-                 key: POSTGRESQL_DATABASE
+      - name: postgres
+        image: quay.io/fedora/postgresql-16:63cb3441de6f5b5bc6ce431bb5c7418ba2bdff33
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: postgres
+          mountPath: /var/lib/pgsql/data
+        env:
+        - name: POSTGRESQL_USER
+          valueFrom:
+            configMapKeyRef:
+              name: postgres-config
+              key: POSTGRESQL_USER
+        - name: POSTGRESQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-password
+              key: POSTGRESQL_PASSWORD
+        - name: POSTGRESQL_DATABASE
+          valueFrom:
+            configMapKeyRef:
+              name: postgres-config
+              key: POSTGRESQL_DATABASE
   volumeClaimTemplates:
     - metadata:
         name: postgres
