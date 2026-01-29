@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: postgres
-        image: quay.io/fedora/postgresql-16:latest
+        image: quay.io/fedora/postgresql-16:SHA256 f8b0c1959929
         ports:
         - containerPort: 5432
         volumeMounts:
