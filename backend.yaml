@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
        - name: backend
-         image: ghcr.io/bostonare/ocp-guestbook-backend:latest
+         image: ghcr.io/bostonare/ocp-guestbook-backend:1.0.16-ca665fd
          imagePullPolicy: Always 
          ports:
           - name: http
